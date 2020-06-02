@@ -4,7 +4,7 @@ public class SignUp {
 
 	public static void validate(String url) throws Exception {
 		
-		Common.open(Main.borwser, url);
+		Common.open(Main.browser, url);
 		
 		Common.pageValidation("01.01 Element [Quotes (dynamic)]", Common.el_01);
 		Common.pageValidation("02.02 Element [Current Location]", Common.el_02);

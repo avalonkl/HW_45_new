@@ -2,10 +2,13 @@ package core;
 
 public class Main {
 
-	static String borwser = "firefox";
-//	static WebDriver driver;
+//	static String borwser = "firefox";
+//	java -cp ./target/HW_45_new-1.0.jar -Dbrowser="chrome" core.Main
+	static String browser;
 
 	public static void main(String[] args) throws Exception {
+		
+		browser = System.getProperty("browser");
 
 		final long start = System.currentTimeMillis();
 

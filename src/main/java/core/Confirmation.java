@@ -4,7 +4,7 @@ public class Confirmation {
 
 	public static void validate(String url) throws Exception {
 
-		Common.open(Main.borwser, url);
+		Common.open(Main.browser, url);
 
 		Common.pageValidation("42.05 Element [Title]", Common.el_05);
 		Common.pageValidation("43.06 Element [First Name (label)]", Common.el_06);

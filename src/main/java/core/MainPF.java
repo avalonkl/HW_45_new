@@ -2,9 +2,14 @@ package core;
 
 public class MainPF {
 
-	static String borwser = "firefox";
+//	static String borwser = "firefox";
+//	java -cp ./target/HW_45_new-1.0.jar -Dbrowser="chrome" core.MainPF
 
+	static String browser;
+	
 	public static void main(String[] args) throws Exception {
+		
+		browser = System.getProperty("browser");
 		
 		final long start = System.currentTimeMillis();
 		

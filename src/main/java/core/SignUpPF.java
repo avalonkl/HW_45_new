@@ -4,7 +4,7 @@ public class SignUpPF {
 
 	public static void validate(String url) throws Exception {
 		
-		CommonPF.open(Main.borwser, url);
+		CommonPF.open(MainPF.browser, url);
 		
 		CommonPF.pageValidation("01.01 Element [Quotes (dynamic)]", CommonPF.el_01);
 		CommonPF.pageValidation("02.02 Element [Current Location]", CommonPF.el_02);

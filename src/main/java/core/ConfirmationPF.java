@@ -4,7 +4,7 @@ public class ConfirmationPF {
 
 	public static void validate(String url) throws Exception {
 
-		CommonPF.open(Main.borwser, url);
+		CommonPF.open(MainPF.browser, url);
 
 		CommonPF.pageValidation("42.05 Element [Title]", CommonPF.el_05);
 		CommonPF.pageValidation("43.06 Element [First Name (label)]", CommonPF.el_06);
