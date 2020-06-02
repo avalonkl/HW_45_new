@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
@@ -150,8 +151,19 @@ public class CommonPF {
 		driver.quit();
 	}
 	
-	static void pageValidation(String test_case, WebElement element) { 
+	static void pageValidation(String test_case, WebElement element) throws Exception {
+		highlightElement(element);
 		System.out.println(test_case + (isElementPresent(element) ? " - exists" : " -not exist") + "; Page [" + getFileName() + "]");
+		unhighlightElement(element);
+	}
+	
+	static void highlightElement(WebElement element) throws Exception{
+		((RemoteWebDriver) driver).executeScript("arguments[0].setAttribute('style','border: solid 3px red');", element); 
+		Thread.sleep(50);
+	}
+	
+	static void unhighlightElement(WebElement element) throws Exception{ 
+		((RemoteWebDriver) driver).executeScript("arguments[0].setAttribute('style','border: solid 0px red');", element);
 	}
 
 }
