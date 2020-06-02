@@ -1,10 +1,8 @@
 package core;
 
-import org.openqa.selenium.WebDriver;
-
 public class SignUp {
 
-	public static void validate(WebDriver driver, String url) throws Exception {
+	public static void validate(String url) throws Exception {
 		
 		Common.open(Main.borwser, url);
 		
@@ -56,5 +54,7 @@ public class SignUp {
 		Common.pageValidation("39.39 Element [Last Name Error (img)]", Common.el_39);
 		Common.pageValidation("40.40 Element [Email Error (img)]", Common.el_40);
 		Common.pageValidation("41.41 Element [Phone Error (img)]", Common.el_41);
+		
+		Common.quit();
 	}
 }

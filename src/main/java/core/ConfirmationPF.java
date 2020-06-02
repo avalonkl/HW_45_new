@@ -1,10 +1,8 @@
 package core;
 
-import org.openqa.selenium.WebDriver;
-
 public class ConfirmationPF {
 
-	public static void validate(WebDriver driver, String url) throws Exception {
+	public static void validate(String url) throws Exception {
 
 		CommonPF.open(Main.borwser, url);
 
@@ -22,5 +20,7 @@ public class ConfirmationPF {
 
 		CommonPF.pageValidation("52.42 Element [Genre (field)]", CommonPF.el_42);
 		CommonPF.pageValidation("53.43 Element [Back (button)]", CommonPF.el_43);
+		
+		CommonPF.quit();
 	}
 }
